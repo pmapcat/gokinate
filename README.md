@@ -106,9 +106,8 @@ Ask & answer are arbitrary fields. They can even, clash with each other.
 Please, keep in mind, that complex extensions will substantially
 slow down walking on directory.
 
-For example, I've removed id3 functionality
-from this program because it took very long time to build an mp3 tree.
-
+For example, I've removed *id3* functionality
+from this program because it took very long time to extract mp3 meta-data. 
 New extension must be placed in *extensions.go* file.
 In format:
 
@@ -146,3 +145,4 @@ func Dispatch_Tag(el Element_yaml, p AttrPath, f os.FileInfo) WorkerReturn {
 	return result
 }
 ```
+

@@ -1,12 +1,10 @@
 # What is it, actually?
 ## First one
-[gif about the docs]
-
+![gif about the docs](/gifs/office_doc.gif)
 ## Second one
-[gif about the nginx]
+![gif about the nginx](/gifs/nginx.gif)
 ## Third one
-[gif about the music]
-
+![gif about the images](/gifs/image.gif)
 # Performance
 Examples in the gif(in downloads folder) above run in real time(no persistent quering) on,
 approximately,  *50 000 files on traditional HDD*.
@@ -22,8 +20,8 @@ We discard here sorting as it is a very small amount(5-10 tags to sort per node)
 # Installation guide
 
 ```bash
-go get github.com/mik/blablabblab;
-cd $GOPATH/src/[my-repo];
+go get github.com/MichaelLeachim/gokinate;
+cd $GOPATH/src/github.com/MichaelLeachim/gokinate;
 go build;
 go install;
 gokinate -p ~/Downloads/;
@@ -34,7 +32,7 @@ gokinate -p ~/Downloads/;
 
 You can find config file here
 ```bash
-cd $GOPATH/src/mik-src/;
+cd $GOPATH/src/github.com/MichaelLeachim/gokinate;
 ```
 Go to the program directory and change **attrs.yaml** file
 
@@ -43,7 +41,7 @@ Go to the program directory and change **attrs.yaml** file
 You need go-bindata to be installed.
 
 ```bash
-cd $GOPATH/src/mik-src/;
+cd $GOPATH/src/github.com/MichaelLeachim/gokinate;
 go-bindata "./attrs.yaml";
 go build;
 go install;

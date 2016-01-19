@@ -1,10 +1,8 @@
-# What is it, actually?
+# Some examples
 ## First one
 ![gif about the docs](/gifs/office_doc.gif)
 ## Second one
 ![gif about the nginx](/gifs/nginx.gif)
-## Third one
-![gif about the images](/gifs/image.gif)
 # Performance
 Examples in the gif(in downloads folder) above run in real time(no persistent quering) on,
 approximately,  *50 000 files on traditional HDD*.

@@ -1,0 +1,257 @@
+---
+-
+  Worker: ext_worker
+  Yes: image_file
+  Ask: Is this an image?
+  Items:
+    - .tif
+    - .tiff
+    - .gif
+    - .jpeg
+    - .jpg
+    - .nef
+    - .png
+    - .psd
+    - .bmp
+-
+  Worker: ext_worker
+  Yes: photoshop_file
+  Ask: Is this an Photoshop image?
+  Items:
+    - .psd
+-    
+  Worker: ext_worker
+  Yes: video_file
+  Ask: Is this a video file?
+  Items: 
+    - .avi
+    - .mkv
+    - .mp4
+    - .wmv
+-
+  Worker: ext_worker
+  Yes: audio_file
+  Ask: Is it an audio File?
+  Items:
+    - .mp3
+    - .m3u
+-
+  Worker: ext_worker
+  Yes: disk_mounting_file
+  Ask: Is it a disk mounting file?
+  Items:
+    - .dmg      
+    - .iso
+-
+  Worker: ext_worker
+  Yes: document
+  Ask: Is it a document?
+  Items:
+    - .txt
+    - .doc
+    - .docx
+    - .html
+    - .rtf
+    - .odt
+    - .pdf
+    - .djvu
+    - .xls
+    - .xlsx
+    - .doc
+    - .docx
+    - .ppt
+    - .pptx
+-
+  Worker: ext_worker
+  Yes: office_document
+  Ask: Is it an Office Document?
+  Items:
+    - .xls
+    - .xlsx
+    - .doc
+    - .docx
+    - .ppt
+    - .pptx
+-
+  Worker: ext_worker
+  Yes: presentation
+  Ask: Is it a presentation?
+  Items:
+    - .ppt
+    - .pptx
+-
+  Worker: ext_worker
+  Yes: spreadsheet
+  Ask: Is it an spreadsheet?
+  Items:
+    - .xls
+    - .xlsx
+-
+  Worker: ext_worker
+  Yes: word_docs
+  Ask: Is it a word docs?
+  Items:
+    - .doc
+    - .docx
+-    
+  Worker: ext_worker 
+  Yes: torrent
+  Ask: Is it a torrent file?
+  Items:
+    - .torrent
+-    
+  Worker: ext_worker 
+  Yes: book
+  Ask: Is it a book?
+  Items:
+    - .pdf
+    - .djvu
+    - .fb2
+    - .epub
+    - .maff
+-
+  Worker: ext_worker 
+  Yes: archive
+  Ask: Is it an archive?
+  Items:
+    - .tar
+    - .tar.gz
+    - .gz
+    - .rar
+    - .zip
+    - .bz
+    - .tar.bz
+-
+  Worker: ext_worker 
+  Yes: programming
+  Ask: Is it programming language file?
+  Items:
+     - .rb
+     - .clj
+     - .cljs
+     - .py
+     - .sh
+     - .conf
+     - .go
+     - .json
+     - .c
+     - .pyc
+     - .pyx
+-
+  Worker: ext_worker
+  Yes: python
+  Ask: Is it python?
+  Items:
+    - .py
+    - .pyc
+    - .pyx
+-
+  Worker: ext_worker
+  Yes: config
+  Ask: Is it a config file?
+  Items:
+    - .conf
+    - .json
+-
+  Worker: size_range_worker
+  Yes: small_file
+  Ask: Is this file small(less than 100 megabytes)?
+  Items:  [0,99]
+-
+  Worker: size_range_worker
+  Yes: big_file
+  Ask: Is this file big?
+  Items:  [100,100000]
+-
+  Worker: date_worker
+  Yes: one_week_file
+  Ask: Did you get this file in seven days?
+  Items:  [25,169]
+-
+  Worker: date_worker
+  Yes: yesterday_file
+  Ask: Did you get this file yesterday?
+  Items:  [1,23]
+-
+  Worker: date_worker
+  Yes: one_hour_file
+  Ask: Did you get your file one our ago?
+  Items:  [0,2]
+-
+  Worker: path_substring_worker
+  Yes: downloaded
+  Ask: Did you download it from the internet?
+  Items: [Downloads,Download]
+-
+  Worker: path_substring_worker
+  Yes: apache2
+  Ask: Is it Apache related?
+  Items: [/etc/apache]
+-
+  Worker: path_substring_worker
+  Yes: nginx
+  Ask: Is it Nginx related?
+  Items: [/etc/nginx]
+-
+  Worker: path_substring_worker
+  Yes: vhost_files
+  Ask: Is this a VirtualHost file?
+  Items: [sites-enabled, sites-available]
+-
+  Worker: path_substring_worker
+  Yes: network_info
+  Ask: Is this networking related?
+  Items: [/etc/network]
+-
+  Worker: path_substring_worker
+  Yes: hidden
+  Ask: Is it hidden, .unwanted file?
+  Items: [.unwanted]
+# -
+#   Worker: id3_age_range
+#   Locale:
+#     En: Is it an old music track (older than {{tag}}?
+#   Items: [1900,1969]
+# -
+#   Worker: id3_age_range
+#   Locale:
+#     En: Is it a music of {{tag}}?
+#   Items: [1970,1989]
+# -
+#   Worker: id3_age_range
+#   Locale:
+#     En: Is it a music of {{tag}}?
+#   Items: [1990,2009]
+# -
+#   Worker: id3_age_range
+#   Locale:
+#     En: Is it a music of {{tag}}?
+#   Items: [2010,2011]
+# -
+#   Worker: id3_age_range
+#   Locale:
+#     En: Is it a music of {{tag}}?
+#   Items: [2012,2013]
+# -
+#   Worker: id3_age_range
+#   Locale:
+#     En: Is it a music of {{tag}}?
+#   Items: [2014,2018]
+# -
+#   Worker: id3_standart_tag
+#   Locale:
+#     En: This music genre is {{tag}}?
+#   Items: ["Genre"]
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  

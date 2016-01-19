@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"log"
+	"strings"
 )
 
 var MOVE_RESULT_TO = ""
@@ -30,7 +31,17 @@ type State struct {
 	Conf       []Element_yaml
 }
 
+func (s *State) make_path_walkable(path string) string {
+	// Golang Walk function doesn't walk on directories specified as ~/Downloads, but walks on ~/Downloads/
+	// So, we shall add slash to the path ..
+	if !strings.HasSuffix(path, "/") {
+		return path + "/"
+	}
+	return path
+}
+
 func (s *State) init(path string) {
+	path = s.make_path_walkable(path)
 	s.Nodes = make(map[int]Node)
 	s.Path = path
 	s.TagIndex = make(map[Tag]map[int]bool, 0)

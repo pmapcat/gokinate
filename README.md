@@ -112,7 +112,7 @@ from this program because it took very long time to build an mp3 tree.
 New extension must be placed in *extensions.go* file.
 In format:
 
-```golang
+```go
 func (el *Element_yaml) ext_worker(p AttrPath, i os.FileInfo) WorkerReturn {
 	data := WorkerReturn{}
 	for _, v := range el.Items {
@@ -123,12 +123,12 @@ func (el *Element_yaml) ext_worker(p AttrPath, i os.FileInfo) WorkerReturn {
 		}
 	}
 	return data
-    }
+}
 ```
 
 And registered in dispatch tag function:
 
-```golang
+```go
 func Dispatch_Tag(el Element_yaml, p AttrPath, f os.FileInfo) WorkerReturn {
 	result := WorkerReturn{}
 	if el.Worker == "ext_worker" {
